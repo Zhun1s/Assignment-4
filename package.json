@@ -4,7 +4,8 @@
   "description": "EJS + MongoDB authentication app",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "npm install"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
