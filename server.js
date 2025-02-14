@@ -23,9 +23,10 @@ app.use(express.static("public"));
 app.use('/uploads', express.static('uploads')); // Serve static files from the uploads directory
 app.use(
   session({
-    secret: "secret",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
+    cookie: { secure: false}
   })
 );
 app.set("view engine", "ejs");
