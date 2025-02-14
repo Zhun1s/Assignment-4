@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const User = require("./models/User");
 const authRoutes = require("./routes/authRoutes");
 const adminRoutes = require("./routes/adminRoutes");
+const MongoDBStore = require('connect-mongodb-session')(session);
 
 const app = express();
 
