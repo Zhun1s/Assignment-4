@@ -1,0 +1,12 @@
+<%- include('html', { title: "Register", user: user }); %>
+
+<h2>Register</h2>
+<form action="/auth/register" method="POST" enctype="multipart/form-data">
+  <input type="text" name="username" placeholder="Username" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <div class="file-input-container">
+    <input type="file" name="profilePicture" id="profilePicture" class="file-input">
+    <label for="profilePicture" class="file-input-label">Choose Profile Picture</label>
+  </div>
+  <button type="submit">Register</button>
+</form>

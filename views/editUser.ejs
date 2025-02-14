@@ -1,0 +1,11 @@
+<%- include('html', { title: "Edit User", user: user }); %>
+
+<h2>Edit User</h2>
+<form action="/admin/edit/<%= editUser._id %>" method="POST">
+  <input type="text" name="username" value="<%= editUser.username %>" required>
+  <select name="role">
+    <option value="user" <%= editUser.role === 'user' ? 'selected' : '' %>>User</option>
+    <option value="admin" <%= editUser.role === 'admin' ? 'selected' : '' %>>Admin</option>
+  </select>
+  <button type="submit">Save</button>
+</form>
